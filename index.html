@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search filter</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="search.js"></script>
+
+</head>
+<body>
+<div class="page">
+
+     <div class="page-content d-flex align-items-stretch">
+       <!-- Side Navbar -->
+       <nav class="side-navbar">
+         <!-- Sidebar Header-->
+         <div class="sidebar-header d-flex align-items-center">
+
+             <h1 class="h4">John Doe</h1>
+
+           </div>
+
+
+         <!-- Sidebar Navidation Menus--><span class="heading"></span>
+         <ul class="list-unstyled">
+           <li class="univ-filter"> <a   id="univ-filter" >University<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+           <ul id="option1" class="options">
+             <li><input class="styled-checkbox ds" id="univ-1" type="checkbox" value="University of Oxford" name="univ"  >
+               <label for="univ-1">University of Oxford</label></li>
+             <li><input class="styled-checkbox ds" id="univ-2" type="checkbox" value="University of Reading" name="univ"  >
+                 <label for="univ-2">University of Reading</label></li>
+             <li><input class="styled-checkbox ds" id="univ-3" type="checkbox" value="University College London" name="univ"  >
+                   <label for="univ-3">University College London</label></li>
+             <li><input class="styled-checkbox ds" id="univ-4" type="checkbox" value="University of Cambridge" name="univ"  >
+                     <label for="univ-4">University of Cambridge</label></li>
+           </ul>
+           </li>
+
+           <li class="degree-filter"> <a   id="degree-filter" >Degree Programs<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+            <ul id="option2" class="options">
+              <li><input class="styled-checkbox ds" id="deg-1" type="checkbox" value="Under Graduate" name="deg"  >
+                <label for="deg-1">Under Graduate</label></li>
+              <li><input class="styled-checkbox ds" id="deg-2" type="checkbox" value="Graduate" name="deg"  >
+                  <label for="deg-2">Graduate</label></li>
+              <li><input class="styled-checkbox ds" id="deg-3" type="checkbox" value="Post Graduate" name="deg"  >
+                    <label for="deg-3">Post Graduate</label></li>
+              <li><input class="styled-checkbox ds" id="deg-4" type="checkbox" value="Doctorate" name="deg"  >
+                      <label for="deg-4">Doctorate</label></li>
+            </ul>
+            </li>
+            <li class="grade-filter"> <a   id="grade-filter" >Exam Grades<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+              <ul id="option3" class="options">
+                <span>7.5</span>
+              </ul>
+              </li>
+              <li class="mSkills-filter"> <a   id="mSkills-filter" >Mandatory Skills<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+                <ul id="option4" class="options">
+                  <li><input class="styled-checkbox ds" id="mSkills-1" type="checkbox" value="Java" name="mSkills"  >
+                    <label for="mSkills-1">Java</label></li>
+                  <li><input class="styled-checkbox ds" id="mSkills-2" type="checkbox" value="Javascript" name="mSkills"  >
+                      <label for="mSkills-2">Javascript</label></li>
+                  <li><input class="styled-checkbox ds" id="mSkills-3" type="checkbox" value="PHP" name="mSkills"  >
+                        <label for="mSkills-3">PHP</label></li>
+                  <li><input class="styled-checkbox ds" id="mSkills-4" type="checkbox" value="Lisp" name="mSkills"  >
+                          <label for="mSkills-4">Lisp</label></li>
+                </ul>
+                </li>
+                <li class="oSkills-filter"> <a   id="oSkills-filter" >Optional Skills<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+                  <ul id="option5" class="options">
+                    <li><input class="styled-checkbox ds" id="oSkills-1" type="checkbox" value="Pascal" name="oSkills"  >
+                      <label for="oSkills-1">Pascal</label></li>
+                    <li><input class="styled-checkbox ds" id="oSkills-2" type="checkbox" value="C" name="oSkills"  >
+                        <label for="oSkills-2">C</label></li>
+                    <li><input class="styled-checkbox ds" id="oSkills-3" type="checkbox" value="C#" name="oSkills"  >
+                          <label for="oSkills-3">C#</label></li>
+                    <li><input class="styled-checkbox ds" id="oSkills-4" type="checkbox" value="Sql" name="oSkills"  >
+                            <label for="oSkills-4">Sql</label></li>
+                  </ul>
+                  </li>
+
+         </ul>
+       </nav>
+       <div class="content-inner">
+                <header>
+                    <h2>My page</h2>
+                </header>
+            <div class="card">
+
+                   <div class="card-header" style="display: none;">
+                     <div class="row">
+                       <div class="col-md-12">
+                          <div class='clear-filter'  style='cursor:pointer;'>
+                              <a   id="clearFilter" data-toggle="tooltip" data-placement="bottom" title="Click here to clear filters."><i class="fa fa-times" aria-hidden="true"></i></a>
+
+                          </div>
+                         <ul class="filter-summary-filterList" id="tag-ul">
+
+
+                         </ul>
+
+                   </div>
+
+                     </div>
+                   </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="profile-card">
+                      <img src="img/admin-img-default.png" alt="John" style="width:35%">
+                      <h1>John Doe</h1>
+                      <p class="profile-title">CEO & Founder, Example</p>
+                      <p>Harvard University</p>
+                      <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                        <p><button>Contact</button></p>
+                    </div>
+                        </div>
+
+                    <div class="col-md-3">
+                            <div class="profile-card">
+                      <img src="img/admin-img-default.png" alt="John" style="width:35%">
+                      <h1>John Doe</h1>
+                      <p class="profile-title">CEO & Founder, Example</p>
+                      <p>Harvard University</p>
+                      <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                        <p><button>Contact</button></p>
+                    </div>
+                        </div>
+                    <div class="col-md-3">
+                            <div class="profile-card">
+                      <img src="img/admin-img-default.png" alt="John" style="width:35%">
+                      <h1>John Doe</h1>
+                      <p class="profile-title">CEO & Founder, Example</p>
+                      <p>Harvard University</p>
+                      <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                        <p><button>Contact</button></p>
+                    </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="profile-card">
+                      <img src="img/admin-img-default.png" alt="John" style="width:35%">
+                      <h1>John Doe</h1>
+                      <p class="profile-title">CEO & Founder, Example</p>
+                      <p>Harvard University</p>
+                      <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                        <p><button>Contact</button></p>
+                    </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="profile-card">
+                      <img src="img/admin-img-default.png" alt="John" style="width:35%">
+                      <h1>John Doe</h1>
+                      <p class="profile-title">CEO & Founder, Example</p>
+                      <p>Harvard University</p>
+                      <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                        <p><button>Contact</button></p>
+                    </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="profile-card">
+                      <img src="img/admin-img-default.png" alt="John" style="width:35%">
+                      <h1>John Doe</h1>
+                      <p class="profile-title">CEO & Founder, Example</p>
+                      <p>Harvard University</p>
+                      <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                        <p><button>Contact</button></p>
+                    </div>
+                        </div>
+
+
+
+
+                </div>
+                    </div>
+            </div>
+
+
+
+
+       </div>
+     </div>
+   </div>
+</body>
+</html>
