@@ -32,7 +32,7 @@
 
          <!-- Sidebar Navidation Menus--><span class="heading"></span>
          <ul class="list-unstyled">
-           <li class="univ-filter"> <a   id="univ-filter" >University<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+           <li class="univ-filter"> <a   id="univ-filter" >University<i class="fa fa-minus-square-o" aria-hidden="true"></i></a>
            <ul id="option1" class="options">
              <li><input class="styled-checkbox ds" id="univ-1" type="checkbox" value="University of Oxford" name="univ"  >
                <label for="univ-1">University of Oxford</label></li>
@@ -45,7 +45,7 @@
            </ul>
            </li>
 
-           <li class="degree-filter"> <a   id="degree-filter" >Degree Programs<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+           <li class="degree-filter"> <a   id="degree-filter" >Degree Programs<i class="fa fa-minus-square-o" aria-hidden="true"></i></a>
             <ul id="option2" class="options">
               <li><input class="styled-checkbox ds" id="deg-1" type="checkbox" value="Under Graduate" name="deg"  >
                 <label for="deg-1">Under Graduate</label></li>
@@ -57,35 +57,9 @@
                       <label for="deg-4">Doctorate</label></li>
             </ul>
             </li>
-            <li class="grade-filter"> <a   id="grade-filter" >Exam Grades<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
-              <ul id="option3" class="options">
-                <span>7.5</span>
-              </ul>
-              </li>
-              <li class="mSkills-filter"> <a   id="mSkills-filter" >Mandatory Skills<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
-                <ul id="option4" class="options">
-                  <li><input class="styled-checkbox ds" id="mSkills-1" type="checkbox" value="Java" name="mSkills"  >
-                    <label for="mSkills-1">Java</label></li>
-                  <li><input class="styled-checkbox ds" id="mSkills-2" type="checkbox" value="Javascript" name="mSkills"  >
-                      <label for="mSkills-2">Javascript</label></li>
-                  <li><input class="styled-checkbox ds" id="mSkills-3" type="checkbox" value="PHP" name="mSkills"  >
-                        <label for="mSkills-3">PHP</label></li>
-                  <li><input class="styled-checkbox ds" id="mSkills-4" type="checkbox" value="Lisp" name="mSkills"  >
-                          <label for="mSkills-4">Lisp</label></li>
-                </ul>
-                </li>
-                <li class="oSkills-filter"> <a   id="oSkills-filter" >Optional Skills<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
-                  <ul id="option5" class="options">
-                    <li><input class="styled-checkbox ds" id="oSkills-1" type="checkbox" value="Pascal" name="oSkills"  >
-                      <label for="oSkills-1">Pascal</label></li>
-                    <li><input class="styled-checkbox ds" id="oSkills-2" type="checkbox" value="C" name="oSkills"  >
-                        <label for="oSkills-2">C</label></li>
-                    <li><input class="styled-checkbox ds" id="oSkills-3" type="checkbox" value="C#" name="oSkills"  >
-                          <label for="oSkills-3">C#</label></li>
-                    <li><input class="styled-checkbox ds" id="oSkills-4" type="checkbox" value="Sql" name="oSkills"  >
-                            <label for="oSkills-4">Sql</label></li>
-                  </ul>
-                  </li>
+
+
+
 
          </ul>
        </nav>
@@ -112,13 +86,13 @@
                      </div>
                    </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3">
+                    <div class="row" id="profiles">
+                        <div class="col-md-3 univ-1">
                             <div class="profile-card">
                       <img src="img/admin-img-default.png" alt="John" style="width:35%">
                       <h1>John Doe</h1>
                       <p class="profile-title">CEO & Founder, Example</p>
-                      <p>Harvard University</p>
+                      <p>University Of Oxford</p>
                       <div style="margin: 24px 0;">
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -129,12 +103,12 @@
                     </div>
                         </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 univ-1">
                             <div class="profile-card">
                       <img src="img/admin-img-default.png" alt="John" style="width:35%">
                       <h1>John Doe</h1>
                       <p class="profile-title">CEO & Founder, Example</p>
-                      <p>Harvard University</p>
+                      <p>University Of Oxford</p>
                       <div style="margin: 24px 0;">
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -144,12 +118,12 @@
                         <p><button>Contact</button></p>
                     </div>
                         </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 univ-4">
                             <div class="profile-card">
                       <img src="img/admin-img-default.png" alt="John" style="width:35%">
                       <h1>John Doe</h1>
                       <p class="profile-title">CEO & Founder, Example</p>
-                      <p>Harvard University</p>
+                      <p>University Of Cambridge</p>
                       <div style="margin: 24px 0;">
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -159,12 +133,12 @@
                         <p><button>Contact</button></p>
                     </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 univ-2">
                             <div class="profile-card">
                       <img src="img/admin-img-default.png" alt="John" style="width:35%">
                       <h1>John Doe</h1>
                       <p class="profile-title">CEO & Founder, Example</p>
-                      <p>Harvard University</p>
+                      <p>University Of Reading</p>
                       <div style="margin: 24px 0;">
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -174,12 +148,12 @@
                         <p><button>Contact</button></p>
                     </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 univ-2">
                             <div class="profile-card">
                       <img src="img/admin-img-default.png" alt="John" style="width:35%">
                       <h1>John Doe</h1>
                       <p class="profile-title">CEO & Founder, Example</p>
-                      <p>Harvard University</p>
+                      <p>University Of Reading</p>
                       <div style="margin: 24px 0;">
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -189,12 +163,12 @@
                         <p><button>Contact</button></p>
                     </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 univ-3">
                             <div class="profile-card">
                       <img src="img/admin-img-default.png" alt="John" style="width:35%">
                       <h1>John Doe</h1>
                       <p class="profile-title">CEO & Founder, Example</p>
-                      <p>Harvard University</p>
+                      <p>University College London</p>
                       <div style="margin: 24px 0;">
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>

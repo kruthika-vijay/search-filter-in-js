@@ -2,17 +2,23 @@ $(document).ready(function(){
 
 
 var favorite = [], count=0;
-var tag=[];
+var tag=[], list=[];
 
 $(".ds").change(function(e){
 
   this_text = $(this).val()
   $(".card-header").show();
   $("#clearFilter").show();
+  //$("#profiles").children().hide()
 if(e.target.checked){
 
     favorite.push(this_text);
+    list.push(e.target.id)
+    $('#profiles').children().each(function () {
+                console.log(list)
+               console.log($(this));
 
+});
 
 
 }
@@ -40,6 +46,11 @@ for(i=0;i<favorite.length;i++){
 
     }
 $("#tag-ul").html(tags);
+
+
+
+
+
 
 
 });
