@@ -14,11 +14,9 @@ if(e.target.checked){
 
     favorite.push(this_text);
     list.push(e.target.id)
-    $('#profiles').children().each(function () {
-                console.log(list)
-               console.log($(this));
+    console.log(this_text)
+    console.log($(".profile-card").children().find(this_text))
 
-});
 
 
 }
